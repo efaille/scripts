@@ -5,7 +5,7 @@ install_docker() {
 }
 
 setup() {
-  install_docker()
+  install_docker
 }
 
 setup
