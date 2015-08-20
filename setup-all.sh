@@ -8,4 +8,4 @@ setup() {
   install_docker()
 }
 
-setup()
+setup
