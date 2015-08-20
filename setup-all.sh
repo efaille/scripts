@@ -9,6 +9,7 @@ pull_docker_images() {
 }
 
 setup() {
+  install_docker
   pull_docker_images
 }
 
