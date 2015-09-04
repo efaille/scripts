@@ -5,12 +5,12 @@ upgrade_server() {
 }
 
 install_ssh() {
-  apt-get update && apt-get install openssh-server
+  apt-get update && apt-get install -y openssh-server
 }
 
 configure_ssh() {
-  sed -i -e "s/;PermitRootLogin\s*=\s*without-password/PermitRootLogin = yes/g"
-  service ssh restart -y
+  sed -i -e "s/;PermitRootLogin\s*=\s*without-password/PermitRootLogin = yes/g" /etc/ssh/sshd_config
+  service ssh restart
 }
 
 setup() {
