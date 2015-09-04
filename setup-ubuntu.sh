@@ -13,10 +13,15 @@ configure_ssh() {
   service ssh restart
 }
 
+install_docker() {
+  curl -sSL https://get.docker.com/ | sh
+}
+
 setup() {
   upgrade_server
   install_ssh
   configure_ssh
+  install_docker
 }
 
 setup
