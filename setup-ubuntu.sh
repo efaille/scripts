@@ -9,7 +9,8 @@ install_ssh() {
 }
 
 configure_ssh() {
-  service ssh restart
+  sed -i -e "s/;PermitRootLogin\s*=\s*without-password/PermitRootLogin = yes/g"
+  service ssh restart -y
 }
 
 setup() {
