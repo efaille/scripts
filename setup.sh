@@ -21,14 +21,14 @@ run_nginx_proxy() {
 }
 
 run_personal_website() {
-  docker run --name erickfaille.com --restart=always -d -e VIRTUAL_HOST=erickfaille.com,wwww.erickfaille.com efaille/erickfaille.com
+  docker run --name erickfaille.com --restart=always -d -e VIRTUAL_HOST=erickfaille.com,www.erickfaille.com efaille/erickfaille.com
 }
 
 setup() {
   upgrade_server
   increase_swap
   install_docker
-  
+
   run_nginx_proxy
   run_personal_website
 }
