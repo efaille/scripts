@@ -9,7 +9,7 @@ install_ssh() {
 }
 
 configure_ssh() {
-  sed -i -e "s/PermitRootLogin without-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
+  sed -i -e "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/" /etc/ssh/sshd_config
   service ssh restart
 }
 
